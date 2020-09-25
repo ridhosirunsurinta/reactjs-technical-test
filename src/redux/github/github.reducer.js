@@ -4,7 +4,7 @@ const initialState = {
   repos: null
 };
 
-export const githubReducer = (state = initialState, action) => {
+const githubReducer = (state = initialState, action) => {
   const { type, payload } = action;
   
   switch(type) {
@@ -17,3 +17,5 @@ export const githubReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default githubReducer;

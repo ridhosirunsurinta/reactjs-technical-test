@@ -1,12 +1,18 @@
-import React, { useEffect} from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import PageHome from './pages/page-home.component';
 
 const App = () => {
-  useEffect(() => {
-
-  }, []);
-
   return (
-    <h1>Find your github repo</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={PageHome}
+        />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
